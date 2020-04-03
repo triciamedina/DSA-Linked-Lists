@@ -20,27 +20,32 @@ function main() {
 
     let empty = new LinkedList();
 
-    const display = function(linkedList) {
-        // Bouncer case
-        // If the linked list has neither head or value it is empty
+    const display = function(linkedList, arr) {
+        arr = arr || [];
+    
+        // Edge case (if list is empty)
         if (!linkedList.head && !linkedList.value) {
-            return null
+            return arr;
         }
-
+    
         // Base case
         if (linkedList.value && !linkedList.next) {
-            return `${linkedList.value}`
+            arr.push(linkedList.value);
         }
-
+    
         if (linkedList.head) {
-            if (linkedList.head.next) {
-                return `${linkedList.head.value}\n${display(linkedList.head.next)}`
-            }
+          arr.push(linkedList.head.value);
+          if (linkedList.head.next) {
+              return display(linkedList.head.next, arr);
+          }
         }
-
+    
         if (linkedList.next) {
-            return `${linkedList.value}\n${display(linkedList.next)}`
+            arr.push(linkedList.value);
+            return display(linkedList.next, arr);
         }
+    
+        return arr;
     }
 
     const size = function(linkedList) {
