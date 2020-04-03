@@ -4,7 +4,7 @@
 // sure to insert nodes in the list so that it has a cycle. Then test your 
 // program with a cycleList function.
 
-const LinkedList = require('./linked-list')
+const LinkedList = require('./LinkedList')
 
 function main() {
     let CycleList = new LinkedList();

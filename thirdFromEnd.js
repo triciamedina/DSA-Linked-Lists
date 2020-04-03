@@ -5,7 +5,7 @@
 // therefore don't make any modification to the linked 
 // list class that is provided to you.
 
-const LinkedList = require('./linked-list')
+const LinkedList = require('./LinkedList')
 
 function main() {
     let SLL = new LinkedList();

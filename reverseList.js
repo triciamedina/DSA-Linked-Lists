@@ -8,7 +8,7 @@
 // pointers should point backward. BONUS: Solve this problem using 
 // both recursive and iterative algorithms.
 
-const LinkedList = require('./linked-list')
+const LinkedList = require('./LinkedList')
 
 function main() {
     let SLL = new LinkedList();
