@@ -34,6 +34,26 @@ function main() {
         return lst;
     }
 
+    // Apollo -> Boomer -> Helo -> Husker -> Starbuck -> Tauhida
+
+    function reverseLstRecursive(lst, previous=null, current=lst.head, next=current) {
+        // previous = previous || null; 
+        // current = current || lst.head; 
+        // next = next || current; 
+        
+        if (!current) {
+            lst.head = previous;
+        } else {
+            next = current.next; 
+            current.next = previous; 
+            previous = current; 
+            current = next; 
+            return reverseLstRecursive(lst, previous, current, next)
+        }
+
+        lst.head = previous;
+        return lst;
+    }
     
     const display = function(linkedList, arr) {
         arr = arr || [];
@@ -63,7 +83,7 @@ function main() {
         return arr;
     }
 
-    console.log(display(reverseList(SLL)))
+    console.log(display(reverseLstRecursive(SLL)))
               
 }
 
