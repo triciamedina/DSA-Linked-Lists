@@ -5,20 +5,20 @@ function main() {
 
     SLL.insertFirst('Apollo');
     SLL.insertLast('Boomer');
-    SLL.insertLast('Helo');
-    SLL.insertLast('Husker');
-    SLL.insertLast('Starbuck');
-    SLL.insertLast('Tauhida');
+    // SLL.insertLast('Helo');
+    // SLL.insertLast('Husker');
+    // SLL.insertLast('Starbuck');
+    // SLL.insertLast('Tauhida');
 
-    SLL.remove('Husker');
+    // SLL.remove('Husker');
 
-    SLL.insertBefore('Athena', 1);
-    SLL.insertAfter('Hotdog', 3);
-    SLL.insertAt('Kat', 3);
+    // SLL.insertBefore('Athena', 1);
+    // SLL.insertAfter('Hotdog', 3);
+    // SLL.insertAt('Kat', 3);
 
-    SLL.remove('Tauhida');
+    // SLL.remove('Tauhida');
 
-    let empty = new LinkedList
+    let empty = new LinkedList();
 
     const display = function(linkedList) {
         // Bouncer case
@@ -71,7 +71,7 @@ function main() {
     }
 
     const isEmpty = function(linkedList) {
-        if (!linkedList.head && !linkedList.value) {
+        if (!linkedList.head) {
             return true
         }
 
@@ -129,7 +129,12 @@ function main() {
         }
     }
 
-    console.log(findLast(SLL))
+    // console.log(findLast(SLL))
+    console.log(isEmpty(SLL))
 }
 
 main()
+
+// 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 
+//                      x         
+//                                          x

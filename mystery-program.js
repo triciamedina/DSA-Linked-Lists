@@ -1,5 +1,5 @@
 // This function removes duplicates from a linked list
-//
+// Time complexity is polynomial O(n^2)
 
 function WhatDoesThisProgramDo(lst) {
     // Start at the head
